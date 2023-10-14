@@ -2,26 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  background-image: url("../public/background.svg");
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply px-[10vw] max-xl:px-[5vw] max-md:px-[10px];
+}
+
+.navbar {
+  @apply w-full text-primary-blue text-4xl font-semibold flex justify-end gap-[150px] max-xl:gap-[100px] max-lg:gap-[50px] max-md:gap-[5px] pt-[10vh] pb-[15vh] max-md:pb-[10vh] max-xl:text-3xl max-lg:text-2xl max-md:text-lg;
+}
+
+.top {
+  @apply flex flex-col min-h-screen;
+}
+
+.about {
+  @apply pl-[5vw] flex flex-col;
+}
+
+.skills {
+  @apply flex flex-col pl-[5vw];
+}
+
+.projects {
+  @apply flex flex-col pl-[5vw];
+}
+
+.project-card {
+  @apply flex max-lg:flex-col border-2 border-primary-blue rounded-2xl mt-[10vh] max-md:mt-[20px] shadow-2xl;
+}
+
+.contact {
+  @apply flex flex-col pl-[5vw];
+}
+
+.title {
+  @apply text-5xl max-md:text-2xl text-primary-blue font-semibold py-[5vh] max-md:py-[20px];
+}
+
+.title-close {
+  @apply text-5xl max-md:text-2xl text-primary-black/50 font-semibold ml-auto py-[5vh] max-md:py-[20px];
 }
