@@ -31,7 +31,7 @@ body {
 }
 
 .project-card {
-  @apply flex max-lg:flex-col border-2 border-primary-blue rounded-2xl mt-[10vh] max-md:mt-[20px] shadow-2xl;
+  @apply flex max-lg:flex-col border-2 border-primary-blue rounded-2xl mt-[10vh] max-md:mt-[20px] shadow-2xl bg-primary-light;
 }
 
 .contact {
