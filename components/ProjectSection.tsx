@@ -9,7 +9,7 @@ const ProjectSection = () => {
       description:
         "A web application that allows a user to predict the football match results for the week.",
       image: ScoreSeer,
-      live: "https://score-seer.vercel.app/",
+      live: "https://score-seer.wassimzo.xyz/",
       repo: "https://github.com/WassimZo/ScoreSeer",
     },
     {
@@ -17,7 +17,7 @@ const ProjectSection = () => {
       description:
         "A personal blog where I share my projects and provide more detailed explanations of my thoughts. The blog allows users to like articles, comment on them, and bookmark their favorite articles.",
       image: Wlog,
-      live: "https://wlog-delta.vercel.app/",
+      live: "https://wlog.wassimzo.xyz/",
       repo: "https://github.com/WassimZo/wlog",
     },
   ];

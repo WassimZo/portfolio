@@ -10,7 +10,7 @@ const Navbar = () => {
       >
         {"<resume>"}
       </Link>
-      <Link href="https://wlog-delta.vercel.app/" target="_blank">
+      <Link href="https://wlog.wassimzo.xyz/" target="_blank">
         {"<blog>"}
       </Link>
       <Link href="#contact">{"<contact>"}</Link>
