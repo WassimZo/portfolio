@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 
 const transporter = nodemailer.createTransport({
   pool: true,
-  port: 2525,
+  port: 465,
   service: "hotmail",
   auth: {
     user: process.env.EMAIL_OUTLOOK,
