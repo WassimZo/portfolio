@@ -32,6 +32,7 @@ export async function sendEmail(name: string, email: string, message: string) {
   await new Promise((resolve, reject) => {
     transporter.sendMail(mailOptions, (error: any, info: any) => {
       if (error) {
+        console.log(error);
         throw error;
       } else {
         console.log("Email sent : ", info);
