@@ -4,6 +4,7 @@ import { useLangContext } from "@/context/lang";
 import Link from "next/link";
 
 const TopSectionText = () => {
+  //@ts-ignore
   const { lang } = useLangContext();
   return (
     <div className="flex flex-col gap-[5vh] py-[5vh] w-full max-md:items-center max-md:text-center">

@@ -17,6 +17,7 @@ const ContactSection = () => {
   const [isSending, setIsSending] = useState(false);
   const [validation, setValidation] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  //@ts-ignore
   const { lang } = useLangContext();
 
   const handleSubmit = async (e: FormEvent) => {

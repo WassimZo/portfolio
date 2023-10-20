@@ -4,6 +4,7 @@ import { useLangContext } from "@/context/lang";
 import { useEffect, useState } from "react";
 
 const Title = ({ value, valeur }: { value: string; valeur: string }) => {
+  //@ts-ignore
   const { lang } = useLangContext();
 
   return (

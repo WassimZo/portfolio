@@ -4,6 +4,7 @@ import { useLangContext } from "@/context/lang";
 import Link from "next/link";
 
 const Navbar = () => {
+  //@ts-ignore
   const { lang } = useLangContext();
   return (
     <nav className="navbar">

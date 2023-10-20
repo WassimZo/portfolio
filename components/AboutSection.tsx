@@ -6,6 +6,7 @@ import TitleClose from "./TitleClose";
 import { useLangContext } from "@/context/lang";
 
 const AboutSection = () => {
+  //@ts-ignore
   const { lang } = useLangContext();
   return (
     <section className="about">

@@ -25,6 +25,7 @@ const ProjectCard = ({
   repo,
   live,
 }: Props) => {
+  //@ts-ignore
   const { lang } = useLangContext();
   return (
     <div className="project-card">
