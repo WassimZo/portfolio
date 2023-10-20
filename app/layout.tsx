@@ -1,3 +1,4 @@
+import { LangContextProvider } from "@/context/lang";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
@@ -17,9 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={montserrat.className}>
-        <main>{children}</main>
+        <main>
+          <LangContextProvider>{children}</LangContextProvider>
+        </main>
       </body>
     </html>
   );

@@ -1,12 +1,16 @@
+"use client";
+
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import liveIcon from "@/public/icons/live.svg";
 import repoIcon from "@/public/icons/github.svg";
+import { useLangContext } from "@/context/lang";
 
 type Props = {
   left: boolean;
   title: string;
   description: string;
+  descriptionFr: string;
   image: StaticImageData;
   repo: string;
   live: string;
@@ -16,10 +20,12 @@ const ProjectCard = ({
   left,
   title,
   description,
+  descriptionFr,
   image,
   repo,
   live,
 }: Props) => {
+  const { lang } = useLangContext();
   return (
     <div className="project-card">
       <div
@@ -31,7 +37,7 @@ const ProjectCard = ({
           {title}
         </h1>
         <p className="text-primary-black text-3xl max-md:text-xl h-full">
-          {description}
+          {lang === "EN" ? description : descriptionFr}
         </p>
         <div className="w-full flex justify-center items-center gap-[20%] my-[40px]">
           <Link href={repo}>

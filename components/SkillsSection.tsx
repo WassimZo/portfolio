@@ -1,3 +1,6 @@
+import Title from "./Title";
+import TitleClose from "./TitleClose";
+
 const SkillsSection = () => {
   const skills = [
     "HTML",
@@ -14,7 +17,7 @@ const SkillsSection = () => {
 
   return (
     <section className="skills">
-      <h1 className="title">{"<skills>"}</h1>
+      <Title value="<skills>" valeur="<compétences>" />
       <ul className="grid grid-cols-3 max-md:grid-cols-2 auto-rows-auto gap-x-[5vw] gap-y-[5vh]">
         {skills.map((skill, index) => (
           <li
@@ -25,7 +28,7 @@ const SkillsSection = () => {
           </li>
         ))}
       </ul>
-      <h1 className="title-close">{"</skills>"}</h1>
+      <TitleClose value="</skills>" valeur="</compétences>" />
     </section>
   );
 };

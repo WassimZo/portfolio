@@ -45,3 +45,7 @@ body {
 .title-close {
   @apply text-5xl max-md:text-2xl text-primary-black/50 font-semibold ml-auto py-[5vh] max-md:py-[20px];
 }
+
+.lang-button {
+  @apply text-primary-dark_blue font-semibold text-xl max-md:text-sm max-lg:text-lg;
+}

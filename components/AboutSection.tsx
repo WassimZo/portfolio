@@ -1,21 +1,27 @@
+"use client";
+
 import React from "react";
+import Title from "./Title";
+import TitleClose from "./TitleClose";
+import { useLangContext } from "@/context/lang";
 
 const AboutSection = () => {
+  const { lang } = useLangContext();
   return (
     <section className="about">
-      <div className="title flex items-end">
-        <h1 className="min-w-max">{"<about me>"}</h1>
-        <div className="bg-primary-black/50 h-[1px] w-full" />
-      </div>
+      <Title valeur="<à propos>" value="<about me>" />
       <p className="text-4xl max-md:text-xl">
-        Wassim, 21 yo, based in Marseille (France). I started coding in 2018 and
-        creating{" "}
+        {lang === "EN"
+          ? "Wassim, 21 yo, based in Marseille (France). I started coding in 2018 and creating "
+          : "Wassim, 21 ans, basé à Marseille (France). J'ai commencé à coder en 2018 et à créer des "}
         <span className="text-primary-blue font-semibold">
-          web applications
-        </span>{" "}
-        in 2021 and i'm always seeking to improve my skills.
+          {lang === "EN" ? "web applications " : "applications web "}
+        </span>
+        {lang === "EN"
+          ? " in 2021 and i'm always seeking to improve my skills."
+          : " En 2021, et je cherche toujours à améliorer mes compétences."}
       </p>
-      <h1 className="title-close">{"</about me>"}</h1>
+      <TitleClose valeur="</à propos>" value="</about me>" />
     </section>
   );
 };

@@ -6,6 +6,7 @@ import linkedin from "@/public/icons/linkedin.svg";
 import Image from "next/image";
 import { useState, FormEvent } from "react";
 import { sendEmail } from "@/lib/nodemailer";
+import { useLangContext } from "@/context/lang";
 
 const ContactSection = () => {
   const [inputs, setInputs] = useState({
@@ -16,6 +17,7 @@ const ContactSection = () => {
   const [isSending, setIsSending] = useState(false);
   const [validation, setValidation] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const { lang } = useLangContext();
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -40,9 +42,15 @@ const ContactSection = () => {
     <section className="contact" id="contact">
       <h1 className="title">{"<contact>"}</h1>
       <p className="text-4xl max-md:text-2xl text-primary-black ">
-        Feel free to <span className="text-primary-blue">contact me</span>, I
-        will <span className="text-primary-blue">respond to you</span> when I
-        could
+        {lang === "EN" ? "Feel free to " : "Prenez le temps de "}{" "}
+        <span className="text-primary-blue">
+          {lang === "EN" ? "contact me" : "me contacter"}
+        </span>
+        {lang === "EN" ? ", I will" : ", Je "}
+        <span className="text-primary-blue">
+          {lang === "EN" ? "respond to you" : "réponderais "}
+        </span>
+        {lang === "EN" ? "when I could" : "quand je serais disponible."}
       </p>
       <form
         className="flex max-md:flex-col w-full my-[5vh] gap-[5vw] md:flex-wrap"
@@ -52,21 +60,21 @@ const ContactSection = () => {
           <div className="flex flex-col lg:justify-between max-lg:gap-[20px]">
             <input
               type="text"
-              placeholder="Name"
+              placeholder={lang === "EN" ? "Name" : "Nom"}
               value={inputs.name}
               onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
               className="text-4xl max-md:text-2xl px-6 py-4 text-primary-black border-2 border-primary-blue rounded-2xl focus:border-primary-dark_blue placeholder:text-primary-black outline-none"
             />
             <input
               type="email"
-              placeholder="Email address"
+              placeholder={lang === "EN" ? "Email address" : "Adresse e-mail"}
               value={inputs.email}
               onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
               className="text-4xl max-md:text-2xl px-6 py-4 text-primary-black border-2 border-primary-blue rounded-2xl focus:border-primary-dark_blue placeholder:text-primary-black outline-none"
             />
           </div>
           <textarea
-            placeholder="Your message..."
+            placeholder="Message..."
             rows={8}
             value={inputs.message}
             onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
