@@ -10,7 +10,11 @@ const Navbar = () => {
     <nav className="navbar">
       <Link href="#projects">{lang === "EN" ? "<projects>" : "<projets>"}</Link>
       <Link
-        href="https://drive.google.com/file/d/1xpG1dzYswSVlB-FkZIlhACFVHBKS5Y5Q/view?usp=drive_link"
+        href={
+          lang === "EN"
+            ? "https://drive.google.com/file/d/1GlDrBZU2CKJ64uYyYQCK0btQYLLrPo5p/view?usp=share_link"
+            : "https://drive.google.com/file/d/1JRiVI4PZHijBhYC2lWJW_HAXmvzsA6RE/view?usp=share_link"
+        }
         target="_blank"
       >
         {lang === "EN" ? "<resume>" : "<cv>"}
