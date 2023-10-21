@@ -42,10 +42,22 @@ const ProjectCard = ({
         </p>
         <div className="w-full flex justify-center items-center gap-[20%] my-[40px]">
           <Link href={repo}>
-            <Image src={repoIcon} width={40} height={40} alt="github-icon" />
+            <Image
+              src={repoIcon}
+              width={40}
+              height={40}
+              alt="github-icon"
+              className="svg-icon"
+            />
           </Link>
           <Link href={live}>
-            <Image src={liveIcon} width={40} height={40} alt="live-icon" />
+            <Image
+              src={liveIcon}
+              width={40}
+              height={40}
+              alt="live-icon"
+              className="svg-icon"
+            />
           </Link>
         </div>
       </div>

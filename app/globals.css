@@ -11,7 +11,11 @@ body {
 }
 
 .navbar {
-  @apply w-full text-primary-blue text-4xl font-semibold flex justify-end gap-[150px] max-xl:gap-[100px] max-lg:gap-[50px] max-md:gap-[5px] pt-[10vh] pb-[15vh] max-md:pb-[10vh] max-xl:text-3xl max-lg:text-2xl max-md:text-lg;
+  @apply w-full text-primary-dark_blue text-4xl font-semibold flex justify-end gap-[150px] max-xl:gap-[100px] max-lg:gap-[50px] max-md:gap-[5px] pt-[10vh] pb-[15vh] max-md:pb-[10vh] max-xl:text-3xl max-lg:text-2xl max-md:text-lg;
+}
+
+.navbar a:hover {
+  @apply text-primary-blue;
 }
 
 .top {
@@ -48,4 +52,13 @@ body {
 
 .lang-button {
   @apply text-primary-dark_blue font-semibold text-xl max-md:text-sm max-lg:text-lg;
+}
+
+.lang-button:hover {
+  @apply text-primary-blue;
+}
+
+.svg-icon:hover {
+  filter: invert(12%) sepia(73%) saturate(3930%) hue-rotate(239deg)
+    brightness(94%) contrast(105%);
 }

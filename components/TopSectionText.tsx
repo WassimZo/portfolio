@@ -28,7 +28,7 @@ const TopSectionText = () => {
           : "afin d'améliorer mes compétences"}
       </p>
       <Link href="#contact">
-        <button className="px-12 py-6 mr-auto max-md:mx-auto bg-primary-blue text-primary-light text-5xl max-xl:text-4xl max-md:text-xl font-[500] rounded-3xl shadow-2xl">
+        <button className="px-12 py-6 mr-auto max-md:mx-auto bg-primary-blue hover:bg-primary-dark_blue text-primary-light text-5xl max-xl:text-4xl max-md:text-xl font-[500] rounded-3xl shadow-2xl">
           {lang === "EN" ? "Hire me" : "Contacte moi"}
         </button>
       </Link>

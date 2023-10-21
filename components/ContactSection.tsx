@@ -49,7 +49,7 @@ const ContactSection = () => {
         </span>
         {lang === "EN" ? ", I will" : ", Je "}
         <span className="text-primary-blue">
-          {lang === "EN" ? "respond to you" : "réponderais "}
+          {lang === "EN" ? " respond to you " : "réponderais "}
         </span>
         {lang === "EN" ? "when I could" : "quand je serais disponible."}
       </p>
@@ -90,20 +90,40 @@ const ContactSection = () => {
         )}
         <input
           type="submit"
-          value={isSending ? "Sending..." : "Send"}
+          value={
+            lang === "EN"
+              ? isSending
+                ? "Sending..."
+                : "Send"
+              : isSending
+              ? "Envois..."
+              : "Envoyer"
+          }
           className="bg-primary-blue text-primary-light py-8 max-md:py-4 px-24 max-md:px-12 text-3xl max-md:text-xl font-semibold rounded-2xl ml-auto cursor-pointer hover:bg-primary-dark_blue"
         />
       </form>
       <h1 className="title-close">{"</contact>"}</h1>
       <div className="w-full mt-[5vh] py-[5vh] flex items-center justify-center gap-[20vw]">
         <Link target="_blank" href="https://github.com/WassimZo">
-          <Image src={github} width={50} height={50} alt="github icon" />
+          <Image
+            src={github}
+            width={50}
+            height={50}
+            alt="github icon"
+            className="svg-icon"
+          />
         </Link>
         <Link
           target="_blank"
           href="https://www.linkedin.com/in/wassim-zouaoui-94354a1b8/"
         >
-          <Image src={linkedin} width={50} height={50} alt="linkedin icon" />
+          <Image
+            src={linkedin}
+            width={50}
+            height={50}
+            alt="linkedin icon"
+            className="svg-icon"
+          />
         </Link>
       </div>
     </section>

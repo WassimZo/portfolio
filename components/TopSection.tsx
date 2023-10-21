@@ -14,13 +14,25 @@ const TopSection = () => {
         <div className="flex flex-col items-center gap-[5vh]">
           <LangButton />
           <Link target="_blank" href="https://github.com/WassimZo">
-            <Image src={github} width={30} height={30} alt="github icon" />
+            <Image
+              src={github}
+              width={30}
+              height={30}
+              alt="github icon"
+              className="svg-icon"
+            />
           </Link>
           <Link
             target="_blank"
             href="https://www.linkedin.com/in/wassim-zouaoui-94354a1b8/"
           >
-            <Image src={linkedin} width={30} height={30} alt="linkedin icon" />
+            <Image
+              src={linkedin}
+              width={30}
+              height={30}
+              alt="linkedin icon"
+              className="svg-icon"
+            />
           </Link>
           <div className="h-[200px] w-[1px] bg-primary-black/50" />
         </div>
