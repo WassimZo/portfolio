@@ -2,6 +2,7 @@ import { LangContextProvider } from "@/context/lang";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const montserrat = Montserrat({
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -21,7 +22,10 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={montserrat.className}>
         <main>
-          <LangContextProvider>{children}</LangContextProvider>
+          <LangContextProvider>
+            {children}
+            <Analytics />
+          </LangContextProvider>
         </main>
       </body>
     </html>
